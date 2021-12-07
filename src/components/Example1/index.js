@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import MultilineChart from "./MultilineChart";
+import Legend from "./Legend";
 import schc from "./SCHS.json";
 import vcit from "./VCIT.json";
 import portfolio from "./portfolio.json";
@@ -35,10 +36,27 @@ const dimensions = {
 };
 
 const Example1 = () => {
+    const [selectedItems, setSelectedItems] = useState([]);
+    const legendData = [portfolioData, schcData, vcitData];
+    const chartData = [
+        portfolioData,
+        ...[schcData, vcitData].filter((d) => selectedItems.includes(d.name))
+    ];
+    const onChangeSelection = (name) => {
+        const newSelectedItems = selectedItems.includes(name)
+        ? selectedItems.filter((item) => item !== name)
+        : [...selectedItems, name];
+        setSelectedItems(newSelectedItems);
+    }
     return (
         <div className="app">
+            <Legend
+            data={legendData}
+            selectedItems={selectedItems}
+            onChange={onChangeSelection}
+            />
             <MultilineChart
-                data={[portfolioData, schcData, vcitData]}
+                data={chartData}
                 dimensions={dimensions}
             />
         </div>

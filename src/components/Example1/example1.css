@@ -3,3 +3,12 @@
     border: 5px solid brown;
     display: inline-block;
 }
+
+.legendContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.checkbox{
+    margin: 10px;
+}
