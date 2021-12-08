@@ -4,11 +4,38 @@
     display: inline-block;
 }
 
-.legendContainer{
+.axisX text {
+    text-anchor: start;
+  }
+  
+  .baseGridLine line {
+    stroke: rgba(255, 255, 255, 0.5);
+  }
+  
+  .tooltip text {
+    font-size: 12px;
+    fill: #ffffff;
+  }
+  
+  .tooltipLine {
+    stroke: #ff007a;
+    stroke-width: 1px;
+  }
+  
+  .tooltipContent .contentTitle {
+    font-weight: bold;
+  }
+  
+  .tooltipLinePoint {
+    fill: #ff007a;
+  }
+  
+  .legendContainer {
     display: flex;
     justify-content: center;
-}
-
-.checkbox{
+    color: #ffffff;
+  }
+  
+  .checkbox {
     margin: 10px;
-}
+  }
