@@ -6,6 +6,7 @@ import Counter from "./components/Counter";
 import View from "./components/View";
 import Pokemon from "./components/Pokemon";
 import UserList from "./components/UserList";
+import ThunkUser from "./components/ThunkUser";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <View/>
         <Pokemon/>*/}
         <UserList/>
+        <ThunkUser/>
     </>
   );
 }
