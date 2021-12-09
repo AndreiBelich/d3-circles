@@ -1,5 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react'
-import * as d3 from 'd3'
+import React, {useRef} from 'react'
 import Line from '../Line'
 import Axis from '../Axis'
 import GridLine from '../GridLine'
