@@ -6,9 +6,12 @@ export const pokemonApi = createApi({
     endpoints: (builder) => ({
         getPokemonByName: builder.query({
             query: (name) => `pokemon/${name}`
+        }),
+        getPokemonByGeneration: builder.query({
+            query: (name) => `generation/${name}`
         })
     })
 });
 
 console.log("Pokemon Api: ", pokemonApi);
-export const { useGetPokemonByNameQuery } = pokemonApi;
+export const { useGetPokemonByNameQuery, useGetPokemonByGenerationQuery } = pokemonApi;
